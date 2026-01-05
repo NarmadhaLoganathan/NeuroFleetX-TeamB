@@ -1,0 +1,71 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com:neurofleetx >---------------------------
+[INFO] Building neurofleetx 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ neurofleetx ---
+[INFO] Deleting D:\full\Neurofleetx-Backend\neurofleetx\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ neurofleetx ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ neurofleetx ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 101 source files with javac [debug parameters release 25] to target\classes
+[INFO] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/Smart_Navigation_Engine/ai/service/DataAggregatorService.java: Some input files use unchecked or unsafe operations.
+[INFO] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/Smart_Navigation_Engine/ai/service/DataAggregatorService.java: Recompile with -Xlint:unchecked for details.
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/GpsService.java:[217,17] cannot find symbol
+  symbol:   method orElseThrow(()->new Ru[...]onNo))
+  location: class com.neurofleetx.entity.Vehicle
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/TripService.java:[154,21] incompatible types: long cannot be converted to java.time.LocalDateTime
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/controller/VehicleController.java:[33,63] incompatible types: com.neurofleetx.entity.Vehicle cannot be converted to com.neurofleetx.dto.CreateVehicleDTO
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java:[96,44] cannot find symbol
+  symbol:   method findByDriver_DriverId(java.lang.Long)
+  location: variable vehicleRepository of type com.neurofleetx.repository.VehicleRepository
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java:[103,17] cannot find symbol
+  symbol:   method orElseThrow(()->new Ru[...]und"))
+  location: class com.neurofleetx.entity.Vehicle
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java:[169,16] no suitable constructor found for VehicleDTO(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,vehicle.ge[...] null,java.lang.Double,java.lang.Integer,java.lang.Long,vehicle.ge[...] null)
+    constructor com.neurofleetx.dto.VehicleDTO.VehicleDTO() is not applicable
+      (actual and formal argument lists differ in length)
+    constructor com.neurofleetx.dto.VehicleDTO.VehicleDTO(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.Integer) is not applicable
+      (actual and formal argument lists differ in length)
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.569 s
+[INFO] Finished at: 2025-12-26T21:51:04+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project neurofleetx: Compilation failure: Compilation failure: 
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/GpsService.java:[217,17] cannot find symbol
+[ERROR]   symbol:   method orElseThrow(()->new Ru[...]onNo))
+[ERROR]   location: class com.neurofleetx.entity.Vehicle
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/TripService.java:[154,21] incompatible types: long cannot be converted to java.time.LocalDateTime
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/controller/VehicleController.java:[33,63] incompatible types: com.neurofleetx.entity.Vehicle cannot be converted to com.neurofleetx.dto.CreateVehicleDTO
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java:[96,44] cannot find symbol
+[ERROR]   symbol:   method findByDriver_DriverId(java.lang.Long)
+[ERROR]   location: variable vehicleRepository of type com.neurofleetx.repository.VehicleRepository
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java:[103,17] cannot find symbol
+[ERROR]   symbol:   method orElseThrow(()->new Ru[...]und"))
+[ERROR]   location: class com.neurofleetx.entity.Vehicle
+[ERROR] /D:/full/Neurofleetx-Backend/neurofleetx/src/main/java/com/neurofleetx/service/VehicleService.java:[169,16] no suitable constructor found for VehicleDTO(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,vehicle.ge[...] null,java.lang.Double,java.lang.Integer,java.lang.Long,vehicle.ge[...] null)
+[ERROR]     constructor com.neurofleetx.dto.VehicleDTO.VehicleDTO() is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR]     constructor com.neurofleetx.dto.VehicleDTO.VehicleDTO(java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Double,java.lang.Integer) is not applicable
+[ERROR]       (actual and formal argument lists differ in length)
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

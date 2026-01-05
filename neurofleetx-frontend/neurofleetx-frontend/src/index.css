@@ -1,0 +1,350 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+/* Add these animations to your global CSS file (e.g., index.css or App.css) */
+
+/* Blob Animation for Background */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Pulse Animation for Loading */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Slide In From Left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+/* Slide In From Right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.5s ease-out;
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out;
+}
+
+/* Shimmer Effect for Loading States */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Bounce Animation */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Custom Scrollbar Styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f7fafc;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Glow Effect for Important Elements */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Rotate Animation for Icons */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-rotate {
+  animation: rotate 2s linear infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Skeleton Loading Animation */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Tooltip Arrow Styles */
+.tooltip-arrow {
+  position: relative;
+}
+
+.tooltip-arrow::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #1f2937;
+}
+
+/* Card Hover Effect */
+.card-hover-effect {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-hover-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.card-hover-effect:hover::before {
+  left: 100%;
+}
+
+/* Stagger Animation for Lists */
+.stagger-item {
+  animation: fadeIn 0.5s ease-out backwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+.stagger-item:nth-child(7) { animation-delay: 0.7s; }
+.stagger-item:nth-child(8) { animation-delay: 0.8s; }
+
+/* Glass Morphism Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Success Ripple Animation */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 0.6s ease-out;
+}
+
+/* Notification Slide In */
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInTop {
+  animation: slideInTop 0.4s ease-out;
+}

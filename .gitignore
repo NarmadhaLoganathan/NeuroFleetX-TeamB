@@ -1,0 +1,25 @@
+
+# Dependencies
+**/node_modules/
+**/venv/
+**/env/
+**/__pycache__/
+
+# Build Output
+**/dist/
+**/build/
+**/target/
+**/*.class
+**/*.o
+**/*.obj
+
+# IDE & OS
+**/.idea/
+**/.vscode/
+**/.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
